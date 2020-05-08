@@ -15,7 +15,6 @@ services:
       - WORDPRESS_DB_PASSWORD=${DATABASE_PASSWORD:-password}
     depends_on:
       - mysql
-      - phpmyadmin
     restart: always
     ports:
         - 80:80
