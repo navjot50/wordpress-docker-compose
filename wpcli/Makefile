@@ -13,3 +13,4 @@ configure:
 	wp option update siteurl ${WORDPRESS_WEBSITE_URL}
 	wp rewrite structure $(WORDPRESS_WEBSITE_POST_URL_STRUCTURE)
 	wp plugin install jwt-authentication-for-wp-rest-api --activate
+	wp config set JWT_AUTH_SECRET_KEY a|#h{c5|P &xWs4IZ20c2&%4!c(/uG}W:mAvy<I44`jAbup]t=]V<`}.py(wTP%%
