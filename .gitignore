@@ -4,10 +4,6 @@
 .Rhistory
 .RData
 .DS_Store
-wordpress/*
-!wordpress/.keep
-!wordpress/.htaccess
-!wordpress/entrypoint.sh
 mysql/*
 !mysql/.keep
 logs/nginx/*
