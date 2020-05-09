@@ -76,14 +76,12 @@ if [[ "$1" == apache2* ]] || [ "$1" == php-fpm ]; then
 			cat > .htaccess <<-'EOF'
 				# BEGIN WordPress
 				<IfModule mod_rewrite.c>
-                RewriteEngine On
-                RewriteCond %{HTTP:Authorization} ^(.*)
-                RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
-                RewriteBase /
-                RewriteRule ^index\.php$ - [L]
-                RewriteCond %{REQUEST_FILENAME} !-f
-                RewriteCond %{REQUEST_FILENAME} !-d
-                RewriteRule . /index.php [L]
+				RewriteEngine On
+				RewriteBase /
+				RewriteRule ^index\.php$ - [L]
+				RewriteCond %{REQUEST_FILENAME} !-f
+				RewriteCond %{REQUEST_FILENAME} !-d
+				RewriteRule . /index.php [L]
 				</IfModule>
 				# END WordPress
 			EOF
