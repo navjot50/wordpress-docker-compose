@@ -4,7 +4,7 @@ services:
   wordpress:
     image: wordpress:${WORDPRESS_VERSION:-latest}
     container_name: ${COMPOSE_PROJECT_NAME:-wordpress}
-    entrypoint: ./wordpress/entrypoint.sh
+    entrypoint: ["./wordpress/entrypoint.sh"]
     volumes:
       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/php.ini
       - ${WORDPRESS_DATA_DIR:-./wordpress}:/var/www/html
