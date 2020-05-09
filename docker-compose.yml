@@ -5,10 +5,10 @@ services:
     image: wordpress:${WORDPRESS_VERSION:-latest}
     container_name: ${COMPOSE_PROJECT_NAME:-wordpress}
     entrypoint: 
-      - /usr/local/wordpress/entrypoint.sh
+      - ./wordpress/entrypoint.sh
     volumes:
       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/php.ini
-      - ./wordpress/entrypoint.sh:/usr/local/wordpress/entrypoint.sh
+      - ./wordpress/entrypoint.sh:./wordpress/entrypoint.sh
       - ${WORDPRESS_DATA_DIR:-./wordpress}:/var/www/html
     environment:
       - WORDPRESS_DB_NAME=${COMPOSE_PROJECT_NAME:-wordpress}
