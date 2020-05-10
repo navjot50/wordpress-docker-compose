@@ -12,5 +12,6 @@ configure:
 
 	wp option update siteurl ${WORDPRESS_WEBSITE_URL}
 	wp rewrite structure $(WORDPRESS_WEBSITE_POST_URL_STRUCTURE)
+	wp plugin install contact-form-7 --activate
 	wp plugin install jwt-authentication-for-wp-rest-api --activate
 	wp config set JWT_AUTH_SECRET_KEY mysupersafesecret
