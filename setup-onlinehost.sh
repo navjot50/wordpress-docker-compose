@@ -13,7 +13,7 @@ project_name="wordpress"  # Must be lower-case, no spaces and no invalid path ch
 user_name="wordpress"
 pass_word="wordpress"   # no special chars
 email="your-email@example.com"
-website_title="My Blog"
+website_title="MyBlog"
 website_url="https://www.example.com"
 phmyadmin_url="sql.example.com"
 env_file=".env"
@@ -54,7 +54,7 @@ url_without_http=${url/https:\/\//}              # Replace https
 url_without_www=${url_without_http/www./}
 url=$(echo $url | sed 's;/;\\/;g') # Escape / in url
 sed -i -e "s/sql.example.com/$phmyadmin_url/" $env_file
-sed -i -e "s/My Blog/$website_title/" $env_file
+sed -i -e "s/MyBlog/$website_title/" $env_file
 sed -i -e "s/http:\/\/localhost/$url/" $env_file
 sed -i -e "s/localhost/$url_without_http/" $env_file
 sed -i -e "s/example.com/$url_without_www/" $env_file
