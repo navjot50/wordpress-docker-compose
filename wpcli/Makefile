@@ -14,5 +14,6 @@ configure:
 	wp rewrite structure $(WORDPRESS_WEBSITE_POST_URL_STRUCTURE)
 	wp plugin install contact-form-7 --activate
 	wp plugin install jwt-authentication-for-wp-rest-api --activate
+	wp plugin install https://github.com/wp-net/wordpress-docker-compose/raw/master/plugins/enable-application-passwords.1.0.zip --activate
 	wp config set JWT_AUTH_SECRET_KEY mysupersafesecret
 	wp config set JWT_AUTH_CORS_ENABLE true --raw
